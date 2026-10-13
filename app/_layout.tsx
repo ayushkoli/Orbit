@@ -9,7 +9,7 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useMemo, useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { Platform, StyleSheet, View } from 'react-native';
 import 'react-native-reanimated';
 
 import { ProfileModal } from '@/components/ProfileModal';
@@ -19,6 +19,18 @@ import { initNotifications } from '@/lib/notifications';
 import { attachLogs, dayOrbStats } from '@/lib/stats';
 import { ThemeProvider, useTheme } from '@/lib/theme';
 import { useStore } from '@/store/useStore';
+
+// Register Android widget task handler (must run before React tree mounts)
+// Guard prevents duplicate registration during Fast Refresh
+const g = globalThis as Record<string, unknown>;
+if (Platform.OS === 'android' && !g.__WIDGET_REGISTERED__) {
+  g.__WIDGET_REGISTERED__ = true;
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { registerWidgetTaskHandler } = require('react-native-android-widget');
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { widgetTaskHandler } = require('@/widget/task-handler');
+  registerWidgetTaskHandler(widgetTaskHandler);
+}
 
 SplashScreen.preventAutoHideAsync();
 

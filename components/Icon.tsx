@@ -6,9 +6,12 @@ export const HABIT_ICONS = [
   'code',
   'book',
   'moon',
+  'bolt',
   'heart',
+  'leaf',
   'cup',
   'pen',
+  'sun',
   'music',
   'bike',
   'run',
@@ -63,10 +66,14 @@ function Glyph({ name }: { name: IconName }) {
       );
     case 'moon':
       return <Path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z" />;
+    case 'bolt':
+      return <Path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />;
     case 'heart':
       return (
         <Path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.5 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z" />
       );
+    case 'leaf':
+      return <Path d="M17 8C8 10 5.9 16.2 4 21c7-1 12-4 13-13M17 8l4-4M17 8l-3 3" />;
     case 'cup':
       return (
         <Path d="M5 8h11v6a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5zM16 10h2a2 2 0 0 1 0 4h-2M8 3v2M12 3v2" />
@@ -74,6 +81,13 @@ function Glyph({ name }: { name: IconName }) {
     case 'pen':
       return (
         <Path d="M4 20l1-4L16.5 4.5a2 2 0 0 1 3 3L8 19zM14 7l3 3" />
+      );
+    case 'sun':
+      return (
+        <G>
+          <Circle cx="12" cy="12" r="5" />
+          <Path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </G>
       );
     case 'music':
       return (

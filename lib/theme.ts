@@ -11,6 +11,8 @@ export type ThemePresetId =
   | 'dark-orbit'
   | 'dark-oled'
   | 'dark-aurora'
+  | 'dark-carbon'
+  | 'dark-nebula'
   | 'light-orbit'
   | 'light-minimal'
   | 'light-sand';
@@ -92,6 +94,42 @@ export const THEME_PRESETS: Record<ThemePresetId, Palette> = {
     glass: '#122232cc',
     glassBorder: 'rgba(255, 255, 255, 0.14)',
   },
+  'dark-carbon': {
+    id: 'dark-carbon',
+    name: 'Carbon Black',
+    desc: 'Charcoal steel & ember glow',
+    scheme: 'dark',
+    bg: '#0c0c0e',
+    card: '#18181b',
+    c2: '#232326',
+    text: '#fafafa',
+    muted: '#8b8b96',
+    a1: '#ef4444',
+    a2: '#f59e0b',
+    a3: '#22c55e',
+    ln: '#ffffff12',
+    sh: '#000000',
+    glass: '#18181bcc',
+    glassBorder: 'rgba(255, 255, 255, 0.12)',
+  },
+  'dark-nebula': {
+    id: 'dark-nebula',
+    name: 'Nebula',
+    desc: 'Deep purple cosmos & starlight',
+    scheme: 'dark',
+    bg: '#0d0a1a',
+    card: '#1a1428',
+    c2: '#261e3a',
+    text: '#ede7ff',
+    muted: '#9385b5',
+    a1: '#e879f9',
+    a2: '#a78bfa',
+    a3: '#34d399',
+    ln: '#ffffff10',
+    sh: '#08051599',
+    glass: '#1a1428cc',
+    glassBorder: 'rgba(200, 160, 255, 0.15)',
+  },
   'light-orbit': {
     id: 'light-orbit',
     name: 'Lavender Pearl',
@@ -152,6 +190,8 @@ export const DARK_PRESETS: Palette[] = [
   THEME_PRESETS['dark-orbit'],
   THEME_PRESETS['dark-oled'],
   THEME_PRESETS['dark-aurora'],
+  THEME_PRESETS['dark-carbon'],
+  THEME_PRESETS['dark-nebula'],
 ];
 
 export const LIGHT_PRESETS: Palette[] = [

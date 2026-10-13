@@ -210,6 +210,8 @@ export async function loadAll(): Promise<Snapshot> {
     'dark-orbit',
     'dark-oled',
     'dark-aurora',
+    'dark-carbon',
+    'dark-nebula',
     'light-orbit',
     'light-minimal',
     'light-sand',
