@@ -4,9 +4,7 @@
 
 Orbit is a habit and task tracker for your phone. It helps you plan your day, check off what you've done, and see how consistent you've been over time. Everything stays on your phone. There's no account to create, no sign-up, and nothing is sent to a server.
 
-<!-- Add a hero image or app preview here -->
-<!-- ![Orbit preview](./screenshots/hero.png) -->
-
+<img width="1080" height="2340" alt="Screenshot_20261013_132448_orbit" src="https://github.com/user-attachments/assets/68fcb384-3f20-42d2-aa8b-8129fdb75f3e" />
 ---
 
 ## Why Orbit?
